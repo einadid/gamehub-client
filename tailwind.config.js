@@ -1,4 +1,3 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        orbitron: '"Orbitron", sans-serif',
+        montserrat: '"Montserrat", sans-serif',
+      },
+    },
   },
-  plugins: [require("daisyui")], // daisyui প্লাগইন যোগ করো
+  daisyui: {
+    themes: ["cyberpunk"],
+  },
+  plugins: [require("daisyui")],
 }
