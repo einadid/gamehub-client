@@ -1,10 +1,14 @@
 import React from 'react';
 
 const Footer = () => {
+    // বর্তমান বছরটি ডাইনামিকভাবে পাওয়ার জন্য এই লাইনটি যোগ করা হয়েছে
+    const currentYear = new Date().getFullYear(); 
+
     return (
-        <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+        <footer className="footer footer-center p-4 bg-base-300 text-base-content font-montserrat">
             <aside>
-                <p>Copyright © 5 - All right reserved by GameHub Industries Ltd</p>
+                {/* এখানে ডাইনামিক currentYear ভ্যারিয়েবলটি ব্যবহার করা হচ্ছে */}
+                <p>Copyright © {currentYear} - All right reserved by <a href="https://github.com/einadid">einadid</a></p>
             </aside>
         </footer>
     );
