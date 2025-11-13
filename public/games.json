@@ -1,0 +1,64 @@
+// public/games.json
+
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://i.ibb.co/68vD1f7/pubg.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.8",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co/zZ3yS5C/genshin.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/en/",
+    "description": "Embark on a journey across Teyvat to find your lost sibling and unravel the mysteries of the Seven. An open-world adventure!",
+    "ratings": "4.9",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "3",
+    "title": "Among Us",
+    "coverPhoto": "https://i.ibb.co/VMyBqFh/among-us.jpg",
+    "category": "Social Deduction",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "An online multiplayer social deduction game. Play with 4-15 players online or via local WiFi as you attempt to prep your spaceship for departure.",
+    "ratings": "4.4",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "4",
+    "title": "Valorant",
+    "coverPhoto": "https://i.ibb.co/k3t8rPj/valorant.jpg",
+    "category": "Tactical Shooter",
+    "downloadLink": "https://playvalorant.com/en-us/",
+    "description": "Valorant is a team-based tactical shooter and first-person shooter set in the near-future. Blend your style and experience on a global, competitive stage.",
+    "ratings": "4.7",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "5",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co/D8d3wT4/minecraft.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/en-us",
+    "description": "Explore infinite worlds and build everything from the simplest of homes to the grandest of castles. Play in creative mode or mine deep in survival mode.",
+    "ratings": "4.6",
+    "developer": "Mojang"
+  },
+  {
+    "id": "6",
+    "title": "Cyberpunk 2077",
+    "coverPhoto": "https://i.ibb.co/L9nZzV0/cyberpunk.jpg",
+    "category": "Action RPG",
+    "downloadLink": "https://www.cyberpunk.net/us/en/",
+    "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+    "ratings": "4.2",
+    "developer": "CD PROJEKT RED"
+  }
+]

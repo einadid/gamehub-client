@@ -1,0 +1,12 @@
+/* src/index.css */
+
+/* stylelint-disable at-rule-no-unknown */
+/* Tailwind directives are processed by PostCSS/Tailwind CLI */
+body {
+  margin: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
