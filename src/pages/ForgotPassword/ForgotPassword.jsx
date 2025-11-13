@@ -1,7 +1,7 @@
 // src/pages/ForgotPassword/ForgotPassword.jsx
 
 import React, { useContext, useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import toast from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
@@ -12,7 +12,6 @@ const ForgotPassword = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
 
-    // Login পেজ থেকে email এখানে নিয়ে আসার জন্য
     useEffect(() => {
         if (location.state?.email) {
             setEmail(location.state.email);
@@ -29,8 +28,11 @@ const ForgotPassword = () => {
         resetPassword(email)
             .then(() => {
                 toast.success('Password reset email sent! Please check your inbox.');
-                // ইউজারকে Gmail-এ রিডাইরেক্ট করার চেষ্টা
-                window.location.href = 'https://mail.google.com/';
+                // Gmail এ রিডাইরেক্ট করা
+                // window.location.href = 'https://mail.google.com/';
+                // উপরের লাইনটি ব্যবহারকারীকে সরাসরি gmail এ নিয়ে যাবে, যা অনেক সময় ভালো UX না। 
+                // তাই আপাতত শুধু একটি success message দেখানোই ভালো।
+                navigate('/login'); // রিসেট লিঙ্কে পাঠানোর পর লগইন পেজে ফেরত পাঠানো
             })
             .catch(error => {
                 toast.error(error.message);
@@ -61,6 +63,9 @@ const ForgotPassword = () => {
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Send Reset Link</button>
+                        </div>
+                        <div className='text-center mt-4'>
+                            <Link to="/login" className="link link-primary">Back to Login</Link>
                         </div>
                     </form>
                 </div>

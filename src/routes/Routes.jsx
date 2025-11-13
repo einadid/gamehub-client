@@ -9,7 +9,9 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage.jsx";
 import GameDetails from "../pages/GameDetails/GameDetails.jsx";
 import PrivateRoute from "./PrivateRoute.jsx";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword.jsx";
-import AllGames from "../pages/AllGames/AllGames.jsx"; // ১. এই লাইনটি ইম্পোর্ট করো
+import AllGames from "../pages/AllGames/AllGames.jsx"; 
+import MyProfile from '../pages/MyProfile/MyProfile.jsx'; 
+import UpdateProfile from '../pages/UpdateProfile/UpdateProfile.jsx'; 
 
 export const router = createBrowserRouter([
     {
@@ -17,22 +19,27 @@ export const router = createBrowserRouter([
         element: <MainLayout />,
         errorElement: <ErrorPage />,
         children: [
+            // Home
             {
                 path: "/",
                 element: <Home />,
             },
+            // Login
             {
                 path: "/login",
                 element: <Login />,
             },
+            // Register
             {
                 path: "/register",
                 element: <Register />,
             },
+            // Forgot Password
             {
                 path: "/forgot-password",
                 element: <ForgotPassword />,
             },
+            // Game Details (Private)
             {
                 path: "/game/:id",
                 element: (
@@ -41,9 +48,28 @@ export const router = createBrowserRouter([
                     </PrivateRoute>
                 ),
             },
-            { // ২. এই নতুন রুটটি যোগ করো
+            // All Games
+            {
                 path: "/all-games",
                 element: <AllGames />,
+            },
+            // My Profile (Private)
+            {
+                path: "/my-profile",
+                element: (
+                    <PrivateRoute>
+                        <MyProfile />
+                    </PrivateRoute>
+                ),
+            },
+            // Update Profile (Private)
+            {
+                path: "/update-profile",
+                element: (
+                    <PrivateRoute>
+                        <UpdateProfile />
+                    </PrivateRoute>
+                ),
             },
             // এখানে ভবিষ্যতে আরও রুট যোগ করা যাবে
         ],
