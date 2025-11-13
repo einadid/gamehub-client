@@ -2,9 +2,8 @@
 
 **GameHub** is an immersive and engaging online library designed for discovering and supporting game developers. Built with a vibrant, urban-themed UI, this single-page application offers a dynamic user experience with advanced animations and interactive elements.
 
-### [➡️ Visit GameHub Live](https://your-live-site-url.netlify.app)
+### [➡️ Visit GameHub Live](https://gamehubhero.netlify.app/)
 
-*(Note: Replace `your-live-site-url.netlify.app` with your actual deployed URL after hosting.)*
 
 ---
 
@@ -49,5 +48,3 @@
 | **Utilities** | `react-helmet-async`, `prop-types`                 |
 
 ----
-
-The application will be available at `https://gamehubhero.netlify.app/`.
