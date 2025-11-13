@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../providers/AuthProvider';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider.jsx';
 import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const navigate = useNavigate();
 
     const handleLogOut = () => {
         logOut()
@@ -21,7 +20,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar bg-base-100 shadow-lg px-4 sticky top-0 z-50 font-montserrat">
+        <div className="navbar bg-base-200 shadow-lg px-4 sticky top-0 z-50 font-montserrat">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -45,7 +44,7 @@ const Navbar = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" title={user.displayName}>
-                                <img src={user.photoURL} alt={user.displayName} />
+                                <img src={user.photoURL || `https://ui-avatars.com/api/?name=${user.displayName}`} alt={user.displayName} />
                             </div>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">

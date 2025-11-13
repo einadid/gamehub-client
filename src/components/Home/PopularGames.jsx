@@ -36,13 +36,16 @@ const PopularGames = () => {
                         custom={index}
                         variants={cardVariants}
                         initial="hidden"
-                        animate="visible"
-                        className="card bg-base-100 shadow-xl image-full transition-transform duration-300 hover:scale-105"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="card bg-base-200 shadow-xl image-full transition-transform duration-300 hover:scale-105"
                     >
                         <figure><img src={game.coverPhoto} alt={game.title} className="w-full h-full object-cover" /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title text-2xl font-montserrat">{game.title}</h2>
-                            <p className='text-lg'>Rating: <span className='font-bold text-yellow-400'>{game.ratings} ⭐</span></p>
+                        <div className="card-body justify-between">
+                            <div>
+                                <h2 className="card-title text-2xl font-montserrat">{game.title}</h2>
+                                <p className='text-lg'>Rating: <span className='font-bold text-yellow-400'>{game.ratings} ⭐</span></p>
+                            </div>
                             <div className="card-actions justify-end">
                                 <Link to={`/game/${game.id}`} className="btn btn-primary font-orbitron">
                                     View Details
