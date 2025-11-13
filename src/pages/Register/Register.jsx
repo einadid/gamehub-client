@@ -36,10 +36,12 @@ const Register = () => {
             return;
         }
 
-        let photoURL = `https://i.pinimg.com/736x/dc/80/c5/dc80c5160bd01d66a163ffe15c4e5517.jpg`; // ডিফল্ট অ্যাভাটার
+        // ডিফল্ট অ্যাভাটার URL তৈরি করা
+        let photoURL = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random&font-size=0.33`;
 
-        // যদি ইউজার নতুন ছবি আপলোড করে
+        // যদি ইউজার নতুন ছবি আপলোড করে, তাহলে সেই ছবিটি ব্যবহার করা হবে
         if (imageFile) {
+            // ছবির সাইজ ভ্যালিডেশন
             if (imageFile.size > 300 * 1024) { // 300KB
                 toast.error('Image size should be less than 300KB.');
                 setUploading(false);
@@ -50,23 +52,25 @@ const Register = () => {
             formData.append('image', imageFile);
 
             try {
+                // ImgBB API-তে ছবি আপলোড করা
                 const response = await axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMGBB_API_KEY}`, formData);
                 if (response.data.success) {
-                    photoURL = response.data.data.display_url;
+                    photoURL = response.data.data.display_url; // ImgBB থেকে পাওয়া URL দিয়ে photoURL আপডেট করা
                 } else {
-                    throw new Error('Image upload failed.');
+                    // যদি ImgBB আপলোড ব্যর্থ হয়, তাহলেও রেজিস্ট্রেশন চলবে, শুধু ডিফল্ট অ্যাভাটার ব্যবহার করা হবে
+                    toast.error('Image upload failed, using default avatar.');
                 }
             } catch (error) {
-                toast.error('Failed to upload image. Please try again.');
-                setUploading(false);
-                return;
+                console.error("Image upload error:", error);
+                toast.error('Image upload failed, using default avatar.');
             }
         }
 
         // Firebase ইউজার তৈরি এবং প্রোফাইল আপডেট
         try {
             await createUser(email, password);
-            await updateUserProfile(name, photoURL);
+            // এখানে photoURL হিসেবে হয় আপলোড করা ছবির URL অথবা ডিফল্ট অ্যাভাটারের URL ব্যবহার করা হবে
+            await updateUserProfile(name, photoURL); 
             toast.success('Registration Successful!');
             navigate('/');
         } catch (error) {
@@ -94,14 +98,14 @@ const Register = () => {
                         <input type="text" name="name" placeholder="Your Name" className="input input-bordered" required />
                     </div>
                     
-                    {/* ফটো আপলোড ইনপুট - required সরিয়ে দেওয়া হয়েছে */}
+                    {/* ফটো আপলোড ইনপুট - এটি এখন ঐচ্ছিক */}
                     <div className="form-control">
                         <label className="label"><span className="label-text">Profile Photo (Optional, Max 300KB)</span></label>
                         <input
                             type="file"
                             name="image"
                             className="file-input file-input-bordered file-input-secondary w-full"
-                            accept="image/*"
+                            accept="image/png, image/jpeg, image/jpg"
                         />
                     </div>
                     
