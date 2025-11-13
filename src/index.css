@@ -1,7 +1,31 @@
-body {
-  margin: 0;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* কাস্টম কার্সার */
+  cursor: url('/cursor.svg'), auto;
+}
+
+/* কাস্টম কার্সারের জন্য বাটন এবং লিঙ্কের উপর পয়েন্টার */
+button, a, input[type="submit"], .cursor-pointer {
+  cursor: url('/cursor-pointer.svg'), pointer;
+}
+
+/* কাস্টম স্ক্রলবার */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e779c1; /* synthwave primary color */
+  border-radius: 10px;
+  border: 2px solid #2a2a2a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8ac5;
+}

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-// Swiper.js থেকে প্রয়োজনীয় কম্পোনেন্ট এবং মডিউল ইম্পোর্ট করো
+// Swiper.js থেকে প্রয়োজনীয় কম্পোনেন্ট এবং মডিউল ইম্পোর্ট
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, FreeMode } from 'swiper/modules';
 
-// Swiper.js-এর স্টাইলশীটগুলো ইম্পোর্ট করো
+// Swiper.js-এর স্টাইলশীট
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
@@ -21,7 +21,7 @@ const PopularGames = () => {
             .then(res => res.json())
             .then(data => {
                 const sortedGames = data.sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings));
-                setGames(sortedGames.slice(0, 9)); // লুপের জন্য কিছু বেশি আইটেম নেওয়া ভালো
+                setGames(sortedGames.slice(0, 9));
                 setLoading(false);
             })
             .catch(error => {
@@ -42,52 +42,51 @@ const PopularGames = () => {
         <div className="my-20">
             <h2 className="text-4xl font-bold text-center mb-10 font-orbitron">Popular Games</h2>
 
-            {/* Swiper Carousel */}
             <Swiper
                 modules={[Navigation, Autoplay, FreeMode]}
-                loop={true} // <-- এই প্রপটি Infinite Loop তৈরি করবে
-                navigation={true} // <-- নেভিগেশন অ্যারো দেখানোর জন্য
-                freeMode={true} // <-- স্মুথ স্ক্রলিং এবং সোয়াইপিং এর জন্য
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
+                loop={true}
+                navigation={true}
+                freeMode={true}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
                 breakpoints={{
-                    // মোবাইল ভিউ
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    // ট্যাবলেট ভিউ
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    // ডেস্কটপ ভিউ
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
+                    640: { slidesPerView: 1, spaceBetween: 20 },
+                    768: { slidesPerView: 2, spaceBetween: 30 },
+                    1024: { slidesPerView: 3, spaceBetween: 40 },
                 }}
                 className="mySwiper px-4"
             >
                 {games.map((game) => (
                     <SwiperSlide key={game.id}>
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
-                            <div className="card bg-base-100 shadow-xl image-full h-96 transition-transform duration-300 hover:scale-105">
-                                <figure><img src={game.coverPhoto} alt={game.title} className="w-full h-full object-cover" /></figure>
-                                <div className="card-body justify-between">
+                            {/* 
+                              এখানে মূল পরিবর্তন আনা হয়েছে:
+                              1. 'image-full' ক্লাসটি সরিয়ে দেওয়া হয়েছে।
+                              2. 'relative' ক্লাস যোগ করা হয়েছে।
+                              3. ::before pseudo-element এর জন্য কাস্টম ক্লাস যোগ করা হয়েছে।
+                            */}
+                            <div className="card relative bg-base-100 shadow-xl h-96 overflow-hidden group transition-all duration-300 hover:shadow-primary/50">
+                                <figure className='h-full'>
+                                    <img src={game.coverPhoto} alt={game.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                </figure>
+                                
+                                {/* কাস্টম ওভারলে */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+
+                                {/* card-body এখন absolute পজিশনে */}
+                                <div className="card-body absolute inset-0 flex flex-col justify-end p-6 text-white">
                                     <div>
-                                        <h2 className="card-title text-2xl font-montserrat">{game.title}</h2>
-                                        <p className='text-lg'>Rating: <span className='font-bold text-yellow-400'>{game.ratings} ⭐</span></p>
+                                        <h2 className="card-title text-2xl font-orbitron drop-shadow-lg">{game.title}</h2>
+                                        <p className='text-lg mt-1'>
+                                            Rating: <span className='font-bold text-yellow-300'>{game.ratings} ⭐</span>
+                                        </p>
                                     </div>
-                                    <div className="card-actions justify-end">
-                                        <Link to={`/game/${game.id}`} className="btn btn-primary font-orbitron">
+                                    <div className="card-actions justify-end mt-4">
+                                        <Link to={`/game/${game.id}`} className="btn btn-primary btn-sm font-orbitron">
                                             View Details
                                         </Link>
                                     </div>

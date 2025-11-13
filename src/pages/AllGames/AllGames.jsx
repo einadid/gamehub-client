@@ -1,18 +1,19 @@
-// src/pages/AllGames.jsx
+// src/pages/AllGames/AllGames.jsx
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 const AllGames = () => {
-    const [allGames, setAllGames] = useState([]); // মূল ডেটা
-    const [filteredGames, setFilteredGames] = useState([]); // ফিল্টার করা ডেটা
+    // ... state এবং useEffect (ডেটা fetch ও filter) অপরিবর্তিত ...
+    const [allGames, setAllGames] = useState([]);
+    const [filteredGames, setFilteredGames] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const [categories, setCategories] = useState([]);
 
-    // ডেটা ফেচ করা
     useEffect(() => {
         setLoading(true);
         fetch('/games.json')
@@ -20,28 +21,28 @@ const AllGames = () => {
             .then(data => {
                 setAllGames(data);
                 setFilteredGames(data);
+                const uniqueCategories = [...new Set(data.map(game => game.category))];
+                setCategories(['All', ...uniqueCategories]);
                 setLoading(false);
             });
     }, []);
 
-    // সার্চ ও ক্যাটাগরি অনুযায়ী ফিল্টার করা
-    useEffect(() => {
+     useEffect(() => {
         let games = [...allGames];
 
-        // সার্চ ফিল্টার
         if (searchTerm) {
             games = games.filter(game =>
                 game.title.toLowerCase().includes(searchTerm.toLowerCase())
             );
         }
 
-        // ক্যাটাগরি ফিল্টার
         if (selectedCategory !== 'All') {
             games = games.filter(game => game.category === selectedCategory);
         }
 
         setFilteredGames(games);
     }, [searchTerm, selectedCategory, allGames]);
+
 
     const containerVariants = {
         hidden: { opacity: 1 },
@@ -55,34 +56,19 @@ const AllGames = () => {
         hidden: { y: 20, opacity: 0 },
         visible: { y: 0, opacity: 1 }
     };
-
-    if (loading) {
-        return (
-            <div className="text-center my-20">
-                <span className="loading loading-lg text-primary"></span>
-            </div>
-        );
-    }
-
-    // ইউনিক ক্যাটাগরি লিস্ট বের করা
-    const categories = ['All', ...new Set(allGames.map(game => game.category))];
-
+    
+    // ... JSX ...
     return (
         <div className="container mx-auto my-12 p-4">
-            <Helmet>
+             <Helmet>
                 <title>GameHub | All Games</title>
             </Helmet>
-
-            <h2 className="text-4xl font-bold text-center mb-10 font-orbitron">
-                All Available Games
-            </h2>
-
-            {/* সার্চ ও ফিল্টার */}
-            <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+            <h2 className="text-4xl font-bold text-center mb-10 font-orbitron">All Available Games</h2>
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 p-4 bg-base-200/50 backdrop-blur-sm rounded-lg">
                 <input
                     type="text"
-                    placeholder="Search games..."
-                    className="input input-bordered w-full md:w-1/2"
+                    placeholder="Search by name..."
+                    className="input input-bordered w-full md:w-1/3"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -92,52 +78,47 @@ const AllGames = () => {
                     onChange={(e) => setSelectedCategory(e.target.value)}
                 >
                     {categories.map(category => (
-                        <option key={category} value={category}>
-                            {category}
-                        </option>
+                        <option key={category} value={category}>{category}</option>
                     ))}
                 </select>
             </div>
 
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-            >
-                {filteredGames.map(game => (
-                    <motion.div
-                        key={game.id}
-                        variants={itemVariants}
-                        className="card bg-base-200 shadow-xl border border-transparent hover:border-primary transition-all duration-300"
-                    >
-                        <figure className="h-56">
-                            <img
-                                src={game.coverPhoto}
-                                alt={game.title}
-                                className="w-full h-full object-cover"
-                            />
-                        </figure>
-                        <div className="card-body">
-                            <h2 className="card-title font-montserrat">{game.title}</h2>
-                            <p>Developer: {game.developer}</p>
-                            <div className="card-actions justify-end items-center mt-4">
-                                <div className="font-bold text-yellow-400">
-                                    ⭐ {game.ratings}
+            {filteredGames.length > 0 ? (
+                 <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+                >
+                    {filteredGames.map(game => (
+                         <motion.div
+                            key={game.id}
+                            variants={itemVariants}
+                            className="card bg-base-200 shadow-xl border border-transparent hover:border-primary transition-all duration-300"
+                        >
+                            <figure className="h-56">
+                                <img src={game.coverPhoto} alt={game.title} className="w-full h-full object-cover" />
+                            </figure>
+                             <div className="card-body">
+                                <h2 className="card-title font-montserrat">{game.title}</h2>
+                                <p>Developer: {game.developer}</p>
+                                <div className="card-actions justify-end items-center mt-4">
+                                    <div className="font-bold text-yellow-400">⭐ {game.ratings}</div>
+                                    <Link to={`/game/${game.id}`} className="btn btn-primary btn-sm font-orbitron">
+                                        Details
+                                    </Link>
                                 </div>
-                                <Link
-                                    to={`/game/${game.id}`}
-                                    className="btn btn-primary btn-sm font-orbitron"
-                                >
-                                    Details
-                                </Link>
                             </div>
-                        </div>
-                    </motion.div>
-                ))}
-            </motion.div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            ) : (
+                <div className="text-center my-20">
+                    <h3 className="text-2xl font-bold">No Games Found</h3>
+                    <p>Try adjusting your search or filter criteria.</p>
+                </div>
+            )}
         </div>
     );
 };
-
 export default AllGames;

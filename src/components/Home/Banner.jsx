@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // ১. Link ইম্পোর্ট করো
 
 const Banner = () => {
+    // তোমার নতুন স্লাইডার ইমেজ
     const slideImages = [
         "https://www.cyberpunk.net/build/images/pre-order/buy-b/keyart-ue-en@2x-cd66fd0d.jpg",
         "https://scontent.fdac13-1.fna.fbcdn.net/v/t1.6435-9/125113706_819401132243412_471089394870265014_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=dqlHBm3m56wQ7kNvwEFVz0t&_nc_oc=AdmnQP3GgRmv6rMXkSqwRlx37O26cXDNt_-lgXyAmZWGSoXMoVJ6gsxPpoLABzpp72c&_nc_zt=23&_nc_ht=scontent.fdac13-1.fna&_nc_gid=7Ti1czaZ1B339K1H0gDj_A&oh=00_AfiTlI-4a3BDexakb_hQQqC3g1NeyfQKSEOB8EpgvTqJrA&oe=693D7013",
@@ -21,7 +23,12 @@ const Banner = () => {
                     >
                         <h2 className='text-3xl md:text-6xl font-bold font-orbitron'>Explore the Universe of Games</h2>
                         <p className='text-lg md:text-xl'>Discover and support your favorite indie developers.</p>
-                        <button className="btn btn-primary font-orbitron">Browse Now</button>
+                        
+                        {/* ২. বাটনটিকে <Link> দিয়ে র‍্যাপ করো */}
+                        <Link to="/all-games">
+                            <button className="btn btn-primary font-orbitron">Browse Now</button>
+                        </Link>
+
                     </motion.div>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -29,6 +36,7 @@ const Banner = () => {
                     <a href="#slide2" className="btn btn-circle btn-ghost text-white">❯</a>
                 </div>
             </div>
+            {/* বাকি স্লাইডগুলো অপরিবর্তিত */}
             <div id="slide2" className="carousel-item relative w-full">
                 <img src={slideImages[1]} className="w-full object-cover" alt="Banner 2" />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
