@@ -1,19 +1,18 @@
-
 [
   {
     "id": "1",
-    "title": "Player Unknowns Battle Ground: PUBG",
-    "coverPhoto": "https://i.ibb.co/68vD1f7/pubg.jpg",
-    "category": "FPS",
-    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
-    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
-    "ratings": "4.8",
-    "developer": "Krafton"
+    "title": "Cyberpunk 2077",
+    "coverPhoto": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S1_2560x1440-b8bfbed19257188c717a26ee5bf79b41",
+    "category": "Action RPG",
+    "downloadLink": "https://www.cyberpunk.net/us/en/",
+    "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+    "ratings": "4.5",
+    "developer": "CD PROJEKT RED"
   },
   {
     "id": "2",
     "title": "Genshin Impact",
-    "coverPhoto": "https://i.ibb.co/zZ3yS5C/genshin.jpg",
+    "coverPhoto": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/01/genshin-impact-main-characters-resting.jpg?w=1200&h=628&fit=crop",
     "category": "Action RPG",
     "downloadLink": "https://genshin.hoyoverse.com/en/",
     "description": "Embark on a journey across Teyvat to find your lost sibling and unravel the mysteries of the Seven. An open-world adventure!",
@@ -22,18 +21,8 @@
   },
   {
     "id": "3",
-    "title": "Among Us",
-    "coverPhoto": "https://i.ibb.co/VMyBqFh/among-us.jpg",
-    "category": "Social Deduction",
-    "downloadLink": "https://www.innersloth.com/games/among-us/",
-    "description": "An online multiplayer social deduction game. Play with 4-15 players online or via local WiFi as you attempt to prep your spaceship for departure.",
-    "ratings": "4.4",
-    "developer": "Innersloth"
-  },
-  {
-    "id": "4",
     "title": "Valorant",
-    "coverPhoto": "https://i.ibb.co/k3t8rPj/valorant.jpg",
+    "coverPhoto": "https://content.screen.nsw.gov.au/assets/Uploads/Past-productions/valorant__ResizedImageWzEwMjQsNTc2XQ.webp",
     "category": "Tactical Shooter",
     "downloadLink": "https://playvalorant.com/en-us/",
     "description": "Valorant is a team-based tactical shooter and first-person shooter set in the near-future. Blend your style and experience on a global, competitive stage.",
@@ -41,23 +30,273 @@
     "developer": "Riot Games"
   },
   {
-    "id": "5",
-    "title": "Minecraft",
-    "coverPhoto": "https://i.ibb.co/D8d3wT4/minecraft.jpg",
-    "category": "Sandbox",
-    "downloadLink": "https://www.minecraft.net/en-us",
-    "description": "Explore infinite worlds and build everything from the simplest of homes to the grandest of castles. Play in creative mode or mine deep in survival mode.",
+    "id": "4",
+    "title": "Player Unknown's Battle Ground: PUBG",
+    "coverPhoto": "https://wallpapers.com/images/hd/playerunknowns-battlegrounds-4k-sfmjxsrlrzyq4ou4.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
     "ratings": "4.6",
-    "developer": "Mojang"
+    "developer": "Krafton"
+  },
+  {
+    "id": "5",
+    "title": "The Witcher 3: Wild Hunt",
+    "coverPhoto": "https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f",
+    "category": "Action RPG",
+    "downloadLink": "https://www.thewitcher.com/en/witcher3",
+    "description": "As Geralt of Rivia, a monster slayer for hire, you must find the child of prophecy, a living weapon capable of untold destruction.",
+    "ratings": "5.0",
+    "developer": "CD PROJEKT RED"
   },
   {
     "id": "6",
-    "title": "Cyberpunk 2077",
-    "coverPhoto": "https://i.ibb.co/L9nZzV0/cyberpunk.jpg",
+    "title": "Among Us",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR9C-t9SGpyepQictggzeqstE5FgBX9wN4rQ&s",
+    "category": "Social Deduction",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "An online multiplayer social deduction game where crewmates work together to complete tasks before one or more impostors can kill everyone aboard.",
+    "ratings": "4.4",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "7",
+    "title": "Minecraft",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBw9g6jfRMqOerLIjz4rhmQK5-V3D19bbjdw&s",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/en-us",
+    "description": "Explore infinite worlds and build everything from the simplest of homes to the grandest of castles. Play in creative mode or mine deep in survival mode.",
+    "ratings": "4.8",
+    "developer": "Mojang"
+  },
+  {
+    "id": "8",
+    "title": "Red Dead Redemption 2",
+    "coverPhoto": "https://cdn1.epicgames.com/b30b6d1b4dfd4dcc93b5490be5e094e5/offer/RDR2476298253_Epic_Games_Wishlist_RDR2_2560x1440_V01-2560x1440-2a9ebe1f7ee202102555be202d5632ec.jpg",
+    "category": "Action-Adventure",
+    "downloadLink": "https://www.rockstargames.com/reddeadredemption2/",
+    "description": "America, 1899. The end of the wild west era has begun as lawmen hunt down the last remaining outlaw gangs. A story of honor and loyalty.",
+    "ratings": "4.9",
+    "developer": "Rockstar Games"
+  },
+  {
+    "id": "9",
+    "title": "Fortnite",
+    "coverPhoto": "https://i.ytimg.com/vi/adGdyCdvKz4/maxresdefault.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
+    "description": "A free-to-play Battle Royale game with numerous game modes for every type of player. A giant world where you can build, fight and survive.",
+    "ratings": "4.5",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "10",
+    "title": "Elden Ring",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1748630546",
     "category": "Action RPG",
-    "downloadLink": "https://www.cyberpunk.net/us/en/",
-    "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+    "downloadLink": "https://en.bandainamcoent.eu/elden-ring/elden-ring",
+    "description": "A vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected.",
+    "ratings": "4.9",
+    "developer": "FromSoftware"
+  },
+  {
+    "id": "11",
+    "title": "League of Legends",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd42Ia4ljXpfsa0Nsu1uUkZ4KQKhOBl50M1g&s",
+    "category": "MOBA",
+    "downloadLink": "https://www.leagueoflegends.com/en-us/",
+    "description": "A team-based strategy game where two teams of five powerful champions face off to destroy the other’s base.",
+    "ratings": "4.3",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "12",
+    "title": "Overwatch 2",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2357570/087a8e54a6fa8cd090cf4d40316938d4791b4440/header_alt_assets_17.jpg?t=1760744539",
+    "category": "Hero Shooter",
+    "downloadLink": "https://overwatch.blizzard.com/en-us/",
+    "description": "A team-based action game set in an optimistic future, where every match is an intense 5v5 battlefield brawl.",
+    "ratings": "4.1",
+    "developer": "Blizzard Entertainment"
+  },
+  {
+    "id": "13",
+    "title": "Hades",
+    "coverPhoto": "https://cdn1.epicgames.com/min/offer/2560x1440-2560x1440-5e710b93049cbd2125cf0261dcfbf943.jpg",
+    "category": "Roguelike",
+    "downloadLink": "https://www.supergiantgames.com/games/hades/",
+    "description": "As the immortal Prince of the Underworld, you'll wield the powers and mythic weapons of Olympus to break free from the clutches of the god of the dead himself.",
+    "ratings": "4.9",
+    "developer": "Supergiant Games"
+  },
+  {
+    "id": "14",
+    "title": "Stardew Valley",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkeLlFQDTHsYjSHtbBsInAYl2aIF54Qz_8zQ&s",
+    "category": "Simulation",
+    "downloadLink": "https://www.stardewvalley.net/",
+    "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life.",
+    "ratings": "4.9",
+    "developer": "ConcernedApe"
+  },
+  {
+    "id": "15",
+    "title": "God of War (2018)",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg?t=1750949016",
+    "category": "Action-Adventure",
+    "downloadLink": "https://www.playstation.com/en-us/games/god-of-war/",
+    "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh world that he must fight to survive... and teach his son to do the same.",
+    "ratings": "5.0",
+    "developer": "Santa Monica Studio"
+  },
+  {
+    "id": "16",
+    "title": "Apex Legends",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4lpblU7GvGa_l5Qh35kCjuYxK0oZytjosWQ&s",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "A free-to-play hero shooter game where legendary characters with powerful abilities team up to battle for fame & fortune on the fringes of the Frontier.",
+    "ratings": "4.6",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "17",
+    "title": "Hollow Knight",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/header.jpg?t=1695270428",
+    "category": "Metroidvania",
+    "downloadLink": "https://hollowknight.com/",
+    "description": "Explore twisting caverns, ancient cities and deadly wastes. Battle tainted creatures and befriend bizarre bugs. Uncover an ancient history and solve the mysteries buried at the kingdom's heart.",
+    "ratings": "4.8",
+    "developer": "Team Cherry"
+  },
+  {
+    "id": "18",
+    "title": "Counter-Strike 2",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1749053861",
+    "category": "Tactical Shooter",
+    "downloadLink": "https://store.steampowered.com/app/730/CounterStrike_2/",
+    "description": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.",
+    "ratings": "4.7",
+    "developer": "Valve"
+  },
+  {
+    "id": "19",
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "coverPhoto": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaBreathOfTheWild.jpg",
+    "category": "Action-Adventure",
+    "downloadLink": "https://www.zelda.com/breath-of-the-wild/",
+    "description": "Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series.",
+    "ratings": "5.0",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "20",
+    "title": "Fall Guys",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU2q3SiW3ljARE5LFGU74SePQgowQyLfbcQQ&s",
+    "category": "Party",
+    "downloadLink": "https://www.fallguys.com/en-US",
+    "description": "Fall Guys is a free, cross-platform, massively multiplayer, party royale game where you and your fellow contestants compete through escalating rounds of absurd obstacle course chaos until one victor remains!",
+    "ratings": "4.3",
+    "developer": "Mediatonic"
+  },
+  {
+    "id": "21",
+    "title": "Phasmophobia",
+    "coverPhoto": "https://clan.akamai.steamstatic.com/images/37002678/75c2aa90c66ba6174724666306f1c0bddbeb9914_400x225.png",
+    "category": "Horror",
+    "downloadLink": "https://store.steampowered.com/app/739630/Phasmophobia/",
+    "description": "Phasmophobia is a 4 player online co-op psychological horror where you and your team members of paranormal investigators will enter haunted locations filled with paranormal activity.",
+    "ratings": "4.8",
+    "developer": "Kinetic Games"
+  },
+  {
+    "id": "22",
+    "title": "Dota 2",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/capsule_616x353.jpg?t=1762820658",
+    "category": "MOBA",
+    "downloadLink": "https://www.dota2.com/home",
+    "description": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover.",
+    "ratings": "4.4",
+    "developer": "Valve"
+  },
+  {
+    "id": "23",
+    "title": "Terraria",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/capsule_616x353.jpg?t=1731252354",
+    "category": "Sandbox",
+    "downloadLink": "https://terraria.org/",
+    "description": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. The world is your canvas and the ground itself is your paint.",
+    "ratings": "4.8",
+    "developer": "Re-Logic"
+  },
+  {
+    "id": "24",
+    "title": "Baldur's Gate 3",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1759825106",
+    "category": "RPG",
+    "downloadLink": "https://baldursgate3.game/",
+    "description": "Gather your party, and return to the Forgotten Realms in a tale of fellowship and betrayal, sacrifice and survival, and the lure of absolute power.",
+    "ratings": "5.0",
+    "developer": "Larian Studios"
+  },
+  {
+    "id": "25",
+    "title": "Call of Duty: Warzone",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1962663/54bd6a40eb3759aca46966aadd4c4d0d84b2713e/header.jpg?t=1760458556",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.callofduty.com/warzone",
+    "description": "Welcome to Warzone, the massive free-to-play combat arena from the world of Modern Warfare. Drop in, armor up, loot for rewards, and battle your way to the top.",
     "ratings": "4.2",
-    "developer": "CD PROJEKT RED"
+    "developer": "Infinity Ward"
+  },
+  {
+    "id": "26",
+    "title": "Dead by Daylight",
+    "coverPhoto": "https://cdn1.epicgames.com/spt-assets/2b2299be8ae84d679d4dc57c55af1510/dead-by-daylight-1hg3x.jpg",
+    "category": "Horror",
+    "downloadLink": "https://deadbydaylight.com/",
+    "description": "Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught.",
+    "ratings": "4.5",
+    "developer": "Behaviour Interactive"
+  },
+  {
+    "id": "27",
+    "title": "Rocket League",
+    "coverPhoto": "https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S1_2560x1440-4c231557ef0a0626fbb97e0bd137d837",
+    "category": "Sports",
+    "downloadLink": "https://www.rocketleague.com/",
+    "description": "Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition.",
+    "ratings": "4.6",
+    "developer": "Psyonix"
+  },
+  {
+    "id": "28",
+    "title": "Sea of Thieves",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOj_10c19Yznto12knOTLY-7G2Kp6mmAlzrg&s",
+    "category": "Action-Adventure",
+    "downloadLink": "https://www.seaofthieves.com/",
+    "description": "Sea of Thieves offers the essential pirate experience, from sailing and fighting to exploring and looting – everything you need to live the pirate life and become a legend in your own right.",
+    "ratings": "4.4",
+    "developer": "Rare"
+  },
+  {
+    "id": "29",
+    "title": "It Takes Two",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz0WYkAFaI0HzdId65oQqcBCOXMcwmAhfUBQ&s",
+    "category": "Co-op",
+    "downloadLink": "https://www.ea.com/games/it-takes-two",
+    "description": "Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op.",
+    "ratings": "4.9",
+    "developer": "Hazelight Studios"
+  },
+  {
+    "id": "30",
+    "title": "Destiny 2",
+    "coverPhoto": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1085660/capsule_616x353.jpg?t=1762978895",
+    "category": "FPS",
+    "downloadLink": "https://www.bungie.net/7/en/Destiny/NewLight",
+    "description": "Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.",
+    "ratings": "4.3",
+    "developer": "Bungie"
   }
 ]

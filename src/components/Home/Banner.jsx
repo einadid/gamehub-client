@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const Banner = () => {
     const slideImages = [
-        "https://i.ibb.co/L9nZzV0/cyberpunk.jpg",
-        "https://i.ibb.co/zZ3yS5C/genshin.jpg",
-        "https://i.ibb.co/k3t8rPj/valorant.jpg"
+        "https://www.cyberpunk.net/build/images/pre-order/buy-b/keyart-ue-en@2x-cd66fd0d.jpg",
+        "https://scontent.fdac13-1.fna.fbcdn.net/v/t1.6435-9/125113706_819401132243412_471089394870265014_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=dqlHBm3m56wQ7kNvwEFVz0t&_nc_oc=AdmnQP3GgRmv6rMXkSqwRlx37O26cXDNt_-lgXyAmZWGSoXMoVJ6gsxPpoLABzpp72c&_nc_zt=23&_nc_ht=scontent.fdac13-1.fna&_nc_gid=7Ti1czaZ1B339K1H0gDj_A&oh=00_AfiTlI-4a3BDexakb_hQQqC3g1NeyfQKSEOB8EpgvTqJrA&oe=693D7013",
+        "https://content.screen.nsw.gov.au/assets/Uploads/Past-productions/valorant__ResizedImageWzEwMjQsNTc2XQ.webp"
     ];
 
     return (
